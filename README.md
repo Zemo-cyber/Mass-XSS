@@ -1,1 +1,1 @@
-# Mass-XSS
+# Mass-XSS Hunt
