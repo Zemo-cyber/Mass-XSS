@@ -1,0 +1,23 @@
+# Install waybackurls & gf tool --> https://youtu.be/_1u1FP9qKv4 
+-------------
+Gf-Patterns:- git clone https://github.com/1ndianl33t/Gf-Patterns
+              mkdir .gf
+              mv ~/Gf-Patterns/*.json ~/.gf
+-------------
+dalfox install:- go-get (developement version)
+-----------------------------------------------
+go get -u github.com/hahwul/dalfox
+cd go
+cd bin
+cp dalfox /usr/local/bin
+-----------------------------------------------
+
+ALL SET NOW MASS HUNT FOR XSS (step by step)
+=============================
+echo "yourtarget.com" | waybackurls | tee target.txt 
+cat target.txt | gf xss | sed 's/=.*/=/' | sed 's/URL: //' | tee targetxss.txt
+dalfox file targetxss.txt pipe
+==========================================================
+ 
+ Video:- https://youtu.be/fVBvqy-7Ug0
+ ------------------------------------------------------------------------------------
